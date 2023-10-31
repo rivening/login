@@ -1,9 +1,11 @@
 # 💡Spring에서 로그인 기능을 구현한 프로젝트 (내가 만든 쿠키~)
 
 ## Login
-	  SELECT COUNT(memno) as cnt
-	  FROM mem
-	  WHERE mem_pw=#{mem_pw} AND mem_id=#{mem_id}
+      <select id="login" parameterType="HashMap" resultType="int">
+		SELECT COUNT(memno) as cnt
+		FROM mem
+		WHERE mem_pw=#{mem_pw} AND mem_id=#{mem_id}
+      </select>
    
 ## Cookie
 
